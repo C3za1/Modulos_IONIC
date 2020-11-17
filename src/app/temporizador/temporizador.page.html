@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    
+    <ion-title>temporizador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="mt-1 container">
+    <div class="form-group mt-4">
+      <div *ngFor="let entry of entries">
+        <span *ngIf= "getElaspsedTime(entry) as elapsed">
+          <h1>{{elapsed.minutes}} m : {{elapsed.seconds}} s </h1>
+        </span>
+      </div>
+    </div>
+  </div>
+
+</ion-content>
